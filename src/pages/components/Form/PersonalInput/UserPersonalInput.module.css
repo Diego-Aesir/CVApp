@@ -1,0 +1,14 @@
+#userDescription {
+    resize: none;
+    width: 60%;
+}
+
+.personalP {
+    font-family: sans-serif;
+    display: flex;
+    height: 45px;
+    font-size: x-large;
+    color: #ffffff;
+    align-items: center;
+    font-weight: bolder;
+}
