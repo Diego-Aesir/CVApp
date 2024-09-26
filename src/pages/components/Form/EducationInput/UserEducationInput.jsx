@@ -1,9 +1,8 @@
 import React, {useState} from "react";
 import styles from "./UserEducationInput.module.css";
 import { FormInput } from "../UserInputs";
-import {Dismiss} from '../EducationInput/UserEducationInput';
 
-export default function UserEducationInput() {
+export default function UserEducationInput({addEducation}) {
     const [isOpen, setIsOpen] = useState(false);
     const [education, setEducation] = useState([]);
     const [formEducation, setFormEducation] = useState({
@@ -17,6 +16,10 @@ export default function UserEducationInput() {
         const {id, value} = event.target;
         setFormEducation((educ) => ({...educ, [id]:value}));
     }
+
+    const Dismiss = () => {
+        setIsOpen(false);
+    };
 
     const ValidateInfoAndSubmit = () => {
         const {name, place, startDate, endDate} = formEducation;
@@ -34,6 +37,12 @@ export default function UserEducationInput() {
         }
 
         setEducation((educ => [...educ, formEducation]));
+        addEducation({
+            name,
+            place,
+            startDate,
+            endDate
+        })
         setFormEducation({name:'', place: '', startDate: '', endDate:''});
         setIsOpen(false);
     }
@@ -42,10 +51,9 @@ export default function UserEducationInput() {
         setEducation((educ) => educ.filter((_, index) => index !== eraseIndex));
     }
 
-
     return (
-        <div display="flex">
-            <p className={styles.personalEducation}> Your Education</p>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+            <p className={styles.personalEducation}> Education</p>
             <div id={styles.educationList}>
                 {education.map((ed, index) => (
                     <div key={index}>

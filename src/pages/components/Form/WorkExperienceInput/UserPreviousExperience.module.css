@@ -12,6 +12,7 @@
 #workExperienceList {
     display: flex;
     flex-direction: column;
+    width: 350px;
     background: linear-gradient(#fffbfb, #e0e0d3);
     margin-bottom: 10px;
     gap: 10px;

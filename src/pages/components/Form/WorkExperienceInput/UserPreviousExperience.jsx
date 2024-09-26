@@ -2,11 +2,7 @@ import React, {useState} from 'react';
 import styles from './UserPreviousExperience.module.css';
 import { FormInput } from '../UserInputs';
 
-export const Dismiss = () => {
-    setIsOpen(false);
-};
-
-export default function UserPreviousExperience() {
+export default function UserPreviousExperience({addExperience}) {
     const [isOpen, setIsOpen] = useState(false);
     const [previousExperience, updateExperience] = useState([]);
     const [newExperience, setNewExperience] = useState({
@@ -22,6 +18,10 @@ export default function UserPreviousExperience() {
             ...previousInfo,
             [id]: value
         }));
+    };
+
+    const Dismiss = () => {
+        setIsOpen(false);
     };
     
     const ValidateInfoAndSubmit = () => {
@@ -40,6 +40,12 @@ export default function UserPreviousExperience() {
         }
 
         updateExperience((prev => [...prev, newExperience]));
+        addExperience({
+            companyName,
+            jobTitle,
+            startDate,
+            endDate
+        });
         setNewExperience({companyName: '', jobTitle: '', startDate: '', endDate: '' });
         setIsOpen(false);
     };

@@ -1,4 +1,13 @@
-.personalEducation {
+#skillList {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background: linear-gradient(#fffbfb, #e0e0d3);
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.skillsP {
     font-family: sans-serif;
     display: flex;
     height: 45px;
@@ -9,20 +18,11 @@
     font-weight: bolder;
 }
 
-#educationList {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    background: linear-gradient(#fffbfb, #e0e0d3);
-    margin-bottom: 10px;
-    gap: 10px;
-}
-
 .buttonAdd {
     width: 100%;
 }
 
-.buttonErase {
-    margin-top: 10px;
+.buttonEraser {
     width: 100%;
+    margin-top: 10px;
 }

@@ -1,4 +1,4 @@
-.personalEducation {
+.certificationP {
     font-family: sans-serif;
     display: flex;
     height: 45px;
@@ -9,7 +9,7 @@
     font-weight: bolder;
 }
 
-#educationList {
+#certificationList {
     display: flex;
     flex-direction: column;
     width: 350px;
@@ -22,7 +22,7 @@
     width: 100%;
 }
 
-.buttonErase {
+.buttonEraser {
     margin-top: 10px;
     width: 100%;
 }
