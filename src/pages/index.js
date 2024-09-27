@@ -1,5 +1,5 @@
-import HomePage from './components/HomePage';
+import UserInputs from "./components/Form/UserInputs";
 
 export default function Index() {
-  return <HomePage />;
+  return <UserInputs />;
 }

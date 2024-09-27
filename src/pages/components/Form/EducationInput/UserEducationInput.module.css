@@ -1,28 +1,112 @@
-.personalEducation {
-    font-family: sans-serif;
-    display: flex;
-    height: 45px;
-    font-size: x-large;
-    color: #ffffff;
-    align-items: center;
-    align-self: center;
-    font-weight: bolder;
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: linear-gradient(#28a1f1, #080f0d4b);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-#educationList {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    background: linear-gradient(#fffbfb, #e0e0d3);
-    margin-bottom: 10px;
-    gap: 10px;
+.title {
+  font-size: 1.5em;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.educationList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.educationItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(#ffffff, #e0e0d3);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 }
 
 .buttonAdd {
-    width: 100%;
+  width: 100%;
+  background: linear-gradient(#ffffff, #f0f0f0);
+  color: #007bb5;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.buttonAdd:hover {
+  background-color: #005f8a;
+  transform: scale(1.05);
 }
 
 .buttonErase {
-    margin-top: 10px;
-    width: 100%;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+.buttonErase:hover {
+  background-color: #b71c1c;
+  transform: scale(1.05);
+}
+
+.dialog {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(#ffffff, #f0f0f0);
+  width: 320px;
+}
+
+.dialogButtons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.buttonSubmit {
+  background-color: #007bb5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.buttonSubmit:hover {
+  background-color: #005f8a;
+  transform: scale(1.05);
+}
+
+.buttonDismiss {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.buttonDismiss:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
 }
