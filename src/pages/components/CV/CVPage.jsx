@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./CVPage.module.css";
 
 const VerifyList = (list) => {
@@ -11,12 +11,12 @@ const VerifyList = (list) => {
 
 export default function CVPage({ data }) {
   const {
-    personalList,
-    previousExperienceList,
-    certificationList,
-    educationList,
-    skillsList,
-  } = data;
+    personalList = {},
+    previousExperienceList = [],
+    certificationList = [],
+    educationList = [],
+    skillsList = [],
+  } = data || {};
   const [previousExperienceListExist, setPreviousExperienceListExist] =
     useState(true);
   const [certificationListExist, setCertificationListExist] = useState(true);

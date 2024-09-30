@@ -5,11 +5,19 @@ import CVPage from "./components/CV/CVPage";
 const HomePage = () => {
   const router = useRouter();
   const { data } = router.query;
-  const parsedData = data ? JSON.parse(data) : {};
+  const parsedData = data
+    ? JSON.parse(data)
+    : {
+        personalList: {},
+        previousExperienceList: [],
+        certificationList: [],
+        educationList: [],
+        skillsList: [],
+      };
 
   const Data = () => {
     return parsedData;
-  }
+  };
 
   return (
     <div>
